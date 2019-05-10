@@ -1,0 +1,292 @@
+/* 在此撰寫此專案的CSS Style */
+
+* {
+    font-family: '微軟正黑體', 'Airel';
+}
+
+html {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+@font-face {
+    font-family: 華康流風體;
+    src: url(../font/流風體W3.ttc);
+}
+
+@font-face {
+    font-family: 華康竹風體;
+    src: url(../font/竹風體W4.ttc);
+}
+
+#welcome-page {
+    background-image: url(../img/welcome.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-position-y: -150px; */
+    background-repeat: no-repeat;
+    /* background-image: url(../img/title.png) */
+    border-radius: 0;
+    padding-bottom: 100px;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#welcome-page h1 {
+    color: white;
+    font-family: 華康流風體;
+    /* display: inline-block; */
+    /* padding: 40px 0 20px 0; */
+    height: 15vh;
+    font-size: 4em;
+}
+
+#welcome-page h4 {
+    padding: 0 0 0 120px;
+    font-size: 1.1em;
+    color: white;
+    font-family: 華康竹風體;
+}
+
+#welcome-page .level2 {
+    padding: 0 0 0 220px;
+    font-size: 20px;
+}
+
+#welcome-page .level3 {
+    padding: 0 0 0 320px;
+}
+
+#welcome-page .level4 {
+    padding: 0 0 0 420px;
+}
+
+
+/*overall setting*/
+
+img {
+    z-index: 20;
+}
+
+section {
+    position: relative;
+    padding-left: 210px;
+    overflow: none;
+    width: 100%;
+}
+
+section * {
+    z-index: 100;
+}
+
+#About-us,
+#Calender,
+#Gallery {
+    background-color: #111;
+    color: white;
+    /* padding-top: 100px;  */
+}
+
+#Activity,
+#Add_activity {
+    background-color: #222;
+    color: white;
+}
+
+.list-group-new li {
+    color: #222;
+}
+
+#About-us p {
+    color: #aaa;
+}
+
+.header {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.member-table {
+    padding: 0;
+}
+
+.member-table li {
+    float: left;
+    color: #aaa;
+    width: 50%;
+    /* font-weight: 400; */
+    list-style-image: url("../img/star-icon3.png");
+    margin: 2px 0;
+}
+
+.member-table li:hover {
+    color: violet;
+    transition: all .5s ease;
+    font-size: 16.2px;
+    transform-origin: center;
+}
+
+.header h1 {
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.header h1:after {
+    margin-bottom: 10px;
+    content: "";
+    width: 200px;
+    height: 2px;
+    display: block;
+    background: white;
+    margin: 0 auto;
+}
+
+#Contact-us {
+    height: 200px;
+    background-color: #ddd;
+    padding-left: 200px;
+    z-index: 100;
+}
+
+#Contact-us a {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.self-font {
+    font-family: FontAwesome;
+}
+
+#welcome-page p {
+    color: white;
+}
+
+footer {
+    z-index: 1000;
+}
+
+footer a :hover {
+    cursor: pointer;
+}
+
+
+/* particle bg*/
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: 10; */
+}
+
+.bg .bg01,
+.bg .bg02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    -webkit-transition: -webkit-transform 5s cubic-bezier(.19, 1, .22, 1);
+    transition: -webkit-transform 5s cubic-bezier(.19, 1, .22, 1);
+    transition: transform 5s cubic-bezier(.19, 1, .22, 1);
+    transition: transform 5s cubic-bezier(.19, 1, .22, 1), -webkit-transform 5s cubic-bezier(.19, 1, .22, 1);
+}
+
+.bg .bg01 {
+    background: url(../img/particle01.png) center top;
+}
+
+.bg .bg02 {
+    background: url(../img/particle02.png) center top;
+}
+
+
+/* Add_activity */
+
+#Add_activity h3 {
+    padding: 10px 0;
+}
+
+#Add_activity h2 {
+    padding: 30px 0;
+}
+
+#activity_title {
+    width: 50%;
+}
+
+#main {
+    width: 100%;
+}
+
+#start_date,
+#end_date {
+    width: 35%;
+    padding: 0 5% 0 0;
+}
+
+#activity_order {
+    margin: 0 5% 0 5%;
+    width: 10%;
+}
+
+.ss {
+    line-height: 150px;
+    height: 100px;
+    display: inline-block;
+}
+
+.activity_submit {
+    width: 100px;
+    /* height: 50px; */
+    display: inline-block;
+    line-height: 50px;
+    padding: 20px;
+    color: rgb(203, 255, 81);
+}
+
+.control_add_activity_order {
+    width: 50px;
+}
+
+.control_add_activity_title {
+    width: 350px;
+}
+
+.control_add_activity_start_date {
+    width: 200px;
+}
+
+.list-group li div {
+    display: inline-block;
+}
+
+
+/* Calender */
+
+#Calender {
+    padding-bottom: 100px;
+}
+
+#Calender h1 {
+    padding-bottom: 50px;
+}

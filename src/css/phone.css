@@ -1,0 +1,141 @@
+﻿/* 將所有想要的手機板css放在裡面 */
+@media(max-width: 576px) {
+    * {
+        font-family: '微軟正黑體', 'Airel';
+    }
+
+    @font-face {
+        font-family: 華康流風體;
+        src: url(../font/流風體W3.ttc);
+    }
+
+    @font-face {
+        font-family: 華康竹風體;
+        src: url(../font/竹風體W4.ttc);
+    }
+
+    #welcome-page {
+        background-image: url(../img/welcome.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position-y: 0px;
+        /* it was -150 */
+        background-repeat: no-repeat;
+        /* background-image: url(../img/title.png) */
+        border-radius: 0;
+        /* padding-bottom: 100px; */
+        margin-bottom: 0;
+        height: 100%;
+        /* TODO: */
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #welcome-page h1 {
+        color: white;
+        font-family: 華康流風體;
+        padding: 40px 0 20px 0;
+        font-size: 4em;
+    }
+
+    #welcome-page h4 {
+        padding: 0 0 0 120px;
+        font-size: 1.1em;
+        color: white;
+        font-family: 華康竹風體;
+    }
+
+    #welcome-page .level2 {
+        padding: 0 0 0 170px;
+    }
+
+    #welcome-page .level3 {
+        padding: 0 0 0 120px;
+    }
+
+    #welcome-page .level4 {
+        padding: 0 0 0 170px;
+    }
+
+    #About-us,
+    #Gallery {
+        background-color: #111;
+        color: white;
+        /* padding-top: 100px;  */
+    }
+
+    #Activity,
+    #Calendar {
+        background-color: #222;
+        color: white;
+    }
+
+    #About-us p {
+        color: #aaa;
+    }
+
+    .header {
+        padding: 10px 0;
+    }
+
+    .member-table {
+        padding: 0;
+    }
+
+    /* TODO:要把每一項強制換行 */
+
+    .member-table li {
+        float: left;
+        color: #aaa;
+        width: 100%;
+        /* TODO:整個圖案向後 */
+        /* font-weight: 400; */
+        list-style-image: url("../img/star-icon3.png");
+    }
+
+    .header h1 {
+        letter-spacing: 3px;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .header h1:after {
+        margin-bottom: 10px;
+        content: "";
+        width: 200px;
+        height: 2px;
+        display: block;
+        background: white;
+        margin: 0 auto;
+    }
+
+    #Contact-us {
+        height: 200px;
+        background-color: #ddd;
+    }
+
+    #Contact-us a {
+        display: inline-block;
+        padding: 5px 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .self-font {
+        font-family: FontAwesome;
+
+    }
+
+    #welcome-page p {
+        color: white;
+    }
+}
