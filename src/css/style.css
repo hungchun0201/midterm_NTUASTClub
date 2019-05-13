@@ -1,9 +1,5 @@
 /* 在此撰寫此專案的CSS Style */
 
-* {
-    font-family: '微軟正黑體', 'Airel';
-}
-
 html {
     padding: 0;
     overflow-x: hidden;
@@ -24,13 +20,15 @@ body {
     src: url(../font/竹風體W4.ttc);
 }
 
+
+/* welcome page setting */
+
 #welcome-page {
-    background-image: url(../img/welcome.jpg);
+    /* background-image: url(../img/welcome.jpg);
     background-attachment: fixed;
     background-size: cover;
-    /* background-position-y: -150px; */
-    background-repeat: no-repeat;
-    /* background-image: url(../img/title.png) */
+    background-repeat: no-repeat; */
+    background: black;
     border-radius: 0;
     padding-bottom: 100px;
     margin-bottom: 0;
@@ -38,6 +36,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.jumbotron {
+    padding-left: 210px;
 }
 
 #welcome-page h1 {
@@ -49,24 +51,125 @@ body {
     font-size: 4em;
 }
 
-#welcome-page h4 {
-    padding: 0 0 0 120px;
-    font-size: 1.1em;
-    color: white;
-    font-family: 華康竹風體;
+.bbs-screen {
+    color: #bbb;
+    background-color: #000;
+    line-height: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    white-space: pre-wrap;
+    font-size: 24px;
 }
 
-#welcome-page .level2 {
-    padding: 0 0 0 220px;
-    font-size: 20px;
+.bbs-content {
+    font-family: "細明體", "AR PL UMing TW", "Inconsolata", "LiSongPro", monospace;
 }
 
-#welcome-page .level3 {
-    padding: 0 0 0 320px;
+
+/* ANSI code animation setting */
+
+.b0 {
+    background-color: #000;
 }
 
-#welcome-page .level4 {
-    padding: 0 0 0 420px;
+.b1 {
+    background-color: #b00;
+}
+
+.b2 {
+    background-color: #0b0;
+}
+
+.b3 {
+    background-color: #bb0;
+}
+
+.b4 {
+    background-color: #00b;
+}
+
+.b5 {
+    background-color: #b0b;
+}
+
+.b6 {
+    background-color: #0bb;
+}
+
+.b7 {
+    background-color: #bbb;
+}
+
+.f0 {
+    color: #000;
+}
+
+.f1 {
+    color: #900;
+}
+
+.f2 {
+    color: #090;
+}
+
+.f3 {
+    color: #990;
+}
+
+.f4 {
+    color: #009;
+}
+
+.f5 {
+    color: #909;
+}
+
+.f6 {
+    color: #099;
+}
+
+.f7 {
+    color: #999;
+}
+
+.hl {
+    color: #fff;
+}
+
+.hl.f0 {
+    color: #666;
+}
+
+.hl.f1 {
+    color: #f66;
+}
+
+.hl.f2 {
+    color: #6f6;
+}
+
+.hl.f3 {
+    color: #ff6;
+}
+
+.hl.f4 {
+    color: #66f;
+}
+
+.hl.f5 {
+    color: #f6f;
+}
+
+.hl.f6 {
+    color: #6ff;
+}
+
+.hl.f7 {
+    color: #fff;
 }
 
 
@@ -92,6 +195,7 @@ section * {
 #Gallery {
     background-color: #111;
     color: white;
+    font-family: '微軟正黑體', 'Airel';
     /* padding-top: 100px;  */
 }
 
@@ -99,6 +203,7 @@ section * {
 #Add_activity {
     background-color: #222;
     color: white;
+    font-family: '微軟正黑體', 'Airel';
 }
 
 .list-group-new li {
@@ -151,6 +256,7 @@ section * {
 }
 
 #Contact-us {
+    font-family: '微軟正黑體', 'Airel';
     height: 200px;
     background-color: #ddd;
     padding-left: 200px;

@@ -1,3 +1,42 @@
+// import io from 'socket.io-client';
+// // Connecting to socket.io
+// const socket = io.connect("http://localhost:3002");
+// // Checking for connection
+// if (socket !== undefined) {
+//   console.log("Connected to sockets! on welcomePageText");
+// }
+// let text = "";
+let time = [];
+let frames = [];
+// async function getText() {
+//   await socket.on("getText", allText => {
+//     console.log(allText);
+//     text = allText;
+//     time = text.match(/(\^L[01]\.?[1-9]?){1}/gm).map(e => e.slice(2));
+//     let all = text.split(/(\^L[01]\.?[1-9]?){1}/gm);
+//     frames = [];
+//     for (let i = 0; i < all.length; ++i) {
+//       if (i % 2 === 0) {
+//         frames.push(all[i]);
+//       }
+//     }
+//     time.push('2');
+//     time = time.map(e => parseFloat(e) * 1000);
+//     time = time.map((e, index) => {
+//       for (let i = 0; i < index; ++i) {
+//         e += time[i];
+//       }
+//       return e;
+//     })
+
+//   });
+//   console.log("YAAAA");
+//   return { time, frames };
+// }
+// getText();
+//console.log(time);
+//export default getText();
+
 const text = `<span class="hl">你.</span>
 ^L0.2
 
@@ -1239,18 +1278,24 @@ const text = `<span class="hl">你.</span>
 .
                         .
 .
-                 ‧       .    <span class="f3 hl">‧               .         ‧</span>`
-let time = text.match(/(\^L[01]\.?[1-9]?){1}/gm).map(e => e.slice(2));
+                 ‧       .    <span class="f3 hl">‧               .         ‧</span>`;
+
+
+time = text.match(/(\^L[01]\.?[1-9]?){1}/gm).map(e => e.slice(2));
 let all = text.split(/(\^L[01]\.?[1-9]?){1}/gm);
-let frames = [];
+frames = [];
 for (let i = 0; i < all.length; ++i) {
-    if (i % 2 === 0) {
-        frames.push(all[i]);
-    }
+  if (i % 2 === 0) {
+    frames.push(all[i]);
+  }
 }
-time.push('3');
-time = time.map(e => parseFloat(e) * 1000)
-console.log(time);
+time.push('2');
+time = time.map(e => parseFloat(e) * 1000);
+time = time.map((e, index) => {
+  for (let i = 0; i < index; ++i) {
+    e += time[i];
+  }
+  return e;
+})
 
-
-
+export { time, frames };                 

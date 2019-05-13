@@ -5,10 +5,12 @@ const Schema = mongoose.Schema
 const ActivitySchema = new Schema({
     title: {
         type: String,
-        // required: [true, 'title field is required.']
+        required: [true, 'title field is required.']
     },
     order: {
-        type: String,
+        type: Number,
+        required: [true, 'order field is required.']
+
     },
     location: {
         type: String,
@@ -22,6 +24,9 @@ const ActivitySchema = new Schema({
         // required: [true, 'image_web field is required.']
     },
     register_web: {
+        type: String,
+    },
+    construct_date: {
         type: String,
     },
     start_date: {

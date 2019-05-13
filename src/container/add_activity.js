@@ -23,10 +23,13 @@ const handleClick = () => {
         context: nameValue("context"),
         image_web: nameValue("image_web"),
         register_web: nameValue("register_web"),
+        construct_date: (new Date()).toDateString(),
         start_date: nameValue("start_date"),
         end_date: nameValue("end_date"),
-
     });
+    socket.on("save_error", err => {
+        alert(err);
+    })
 }
 const deleteAll = () => {
     if (window.confirm('確定刪除嗎?這會刪除所有現有活動')) {
@@ -36,8 +39,9 @@ const deleteAll = () => {
 }
 const deleteThis = (event) => {
     if (window.confirm('確定刪除此活動?')) {
-        console.log("pressed deleteThis")
-        socket.emit("deleteThis");
+        console.log("pressed deleteThis");
+        let deleteOrder = event.target.parentNode.firstChild.innerHTML;
+        socket.emit("deleteThis", deleteOrder);
     }
 }
 
@@ -133,7 +137,8 @@ class add_activity extends Component {
                                             <div className="control_add_activity_order">{e.order}</div>
                                             <div className="control_add_activity_title">{e.title}</div>
                                             <div className="control_add_activity_start_date">{e.start_date}</div>
-                                            <button type="button" class="btn btn-danger" >刪除活動</button>
+                                            <div className="control_add_activity_start_date">{e.construct_date}</div>
+                                            <button type="button" class="btn btn-danger" onClick={deleteThis} >刪除活動</button>
                                         </li>
                                     ))}
                                 </ul>
