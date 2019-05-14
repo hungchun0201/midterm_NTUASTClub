@@ -280,10 +280,6 @@ a:hover {
     font-family: FontAwesome;
 }
 
-#welcome-page p {
-    color: white;
-}
-
 footer {
     z-index: 1000;
 }
@@ -323,6 +319,15 @@ footer a :hover {
 
 .bg .bg02 {
     background: url(../img/particle02.png) center top;
+}
+
+
+/* Activity */
+
+#Activity h2,
+h4,
+p {
+    padding: 5px 0;
 }
 
 
