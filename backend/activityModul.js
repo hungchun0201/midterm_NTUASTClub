@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const ActivitySchema = new Schema({
     title: {
         type: String,
-        required: [true, 'title field is required.']
+        required: [true, '標題要打啦!!\n']
     },
     order: {
         type: Number,

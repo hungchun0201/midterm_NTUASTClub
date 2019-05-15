@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Activity = require('./activityModul');
 
+require('dotenv').config()
 const app = express();
 const http = require('http').Server(app)
 const serverSocket = require('socket.io')(http)
@@ -10,7 +11,7 @@ const port = 3002;
 app.get('/', (req, res) => res.send('Hello World nooo!'));
 http.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-mongoose.connect('mongodb+srv://LIN:LIN123456@cluster0-kaqqt.mongodb.net/test?retryWrites=true', {
+mongoose.connect(`mongodb+srv://LIN:${process.env.DB_PASSWORD}@cluster0-kaqqt.mongodb.net/test?retryWrites=true`, {
     useNewUrlParser: true
 })
 db = mongoose.connection
@@ -54,7 +55,8 @@ db.once('open', () => {
                 socket.emit('update', res)
                 console.log("server_ok");
             })
-        socket.on('input', data => {
+
+        socket.on('input', async (data) => {
             let title = data.title;
             let order = parseInt(data.order, 10);
             let location = data.location;
@@ -65,6 +67,28 @@ db.once('open', () => {
             let start_date = data.start_date;
             let end_date = data.end_date;
             //檢查資料
+            let outOfRange = Activity.countDocuments().then((res) => {
+                if (order > res + 1) {
+                    socket.emit("save_error", "序的數字不可高於現有活動+1");
+                    return false;
+                }
+                else if (order < 1) {
+                    socket.emit("save_error", "輸入數字過小!!");
+                    return false;
+                }
+                return true;
+            })
+
+            let duplicated = Activity.findOne({ order: order }).then(res => {
+                if (res !== null) {
+                    return Activity.updateMany({ order: { $gte: order } }, { $inc: { order: 1 } })
+                }
+                return true;
+            })
+            let result = await Promise.all([outOfRange, duplicated]);
+            if (!result.every(i => i)) {
+                return;
+            }
 
             //存入資料庫
             const activity = new Activity({ title, order, location, context, image_web, register_web, construct_date, start_date, end_date })
@@ -108,15 +132,17 @@ db.once('open', () => {
                     console.log('Activity remove occur a error:', err);
                 } else {
                     console.log('Activity remove success.');
-                    Activity.find()
-                        .limit(100)
-                        .sort({ _id: 1 })
-                        .exec((err, res) => {
-                            if (err) throw err
+                    Activity.updateMany({ order: { $gt: deleteOrder } }, { $inc: { order: -1 } }).then((res) => {
+                        Activity.find()
+                            .limit(100)
+                            .sort({ order: 1 })
+                            .exec((err, res) => {
+                                if (err) throw err
+                                serverSocket.emit('update', res)
+                                console.log(res);
+                            })
+                    })
 
-                            serverSocket.emit('update', res)
-                            console.log("server_ok");
-                        })
                 }
             })
         })
