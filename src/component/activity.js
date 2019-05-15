@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemsCarousel from 'react-items-carousel';
-
+import { OutlinedLink as LinkButton } from './Button'
 
 class activity extends Component {
 
@@ -41,7 +41,7 @@ class activity extends Component {
                             activePosition={'center'}
 
                             chevronWidth={24}
-                            rightChevron={<i class="fas fa-arrow-alt-circle-right"></i>}
+                            rightChevron={<i class="fas fa-angle-double-right"></i>}
                             leftChevron={<i class="fas fa-angle-double-left"></i>}
                             outsideChevron={false}
                         >
@@ -56,15 +56,19 @@ class activity extends Component {
                                     >
                                         <div style={{
                                             height: "350px",
-                                            background: 'url(' + item.image_web + ') no-repeat',
-                                            backgroundSize: "cover",
+                                            background: 'url(' + item.image_web + ')  no-repeat',
+                                            backgroundSize: "contain",
+                                            backgroundPosition: "center",
 
                                         }} />
 
                                         <h2>{item.title}</h2>
-                                        <h4>{item.start_date}</h4>
+                                        {item.end_date === "" ? <h4>{item.start_date}</h4> : <h4>{item.start_date} 至 {item.end_date}</h4>}
                                         <h4>{item.location}</h4>
-                                        <p>{item.context}</p></div>
+                                        <p>{item.context}</p>
+                                        {item.register_web !== "" && <LinkButton onClick={item.register_web} text="報名資訊" />}
+                                    </div>
+
                                 )
 
                             }

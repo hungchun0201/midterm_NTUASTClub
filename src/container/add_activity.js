@@ -15,7 +15,10 @@ const nameValue = Name => {
     return document.getElementsByName(Name)[0].value;
 }
 const handleClick = () => {
-    console.log(typeof (nameValue("start_date")));
+    if (isNaN(parseInt(nameValue("order"), 10)) === true) {
+        alert('輸入有效的數字!!');
+        return;
+    }
     socket.emit("input", {
         title: nameValue("title"),
         order: nameValue("order"),
@@ -23,14 +26,14 @@ const handleClick = () => {
         context: nameValue("context"),
         image_web: nameValue("image_web"),
         register_web: nameValue("register_web"),
-        construct_date: (new Date()).toDateString(),
+        construct_date: (new Date()).toLocaleString(),
         start_date: nameValue("start_date"),
         end_date: nameValue("end_date"),
     });
-    socket.on("save_error", err => {
-        alert(err);
-    })
 }
+socket.on("save_error", err => {
+    alert(err);
+})
 const deleteAll = () => {
     if (window.confirm('確定刪除嗎?這會刪除所有現有活動')) {
         console.log("pressed deleteAll")
@@ -131,6 +134,7 @@ class add_activity extends Component {
                                         <div className="control_add_activity_order">序</div>
                                         <div className="control_add_activity_title">活動標題</div>
                                         <div className="control_add_activity_start_date">開始時間</div>
+                                        <div className="control_add_activity_start_date">建立時間</div>
                                     </li>
                                     {this.props.activity_data.map((e, e_index) => (
                                         <li key={e.id} className="list-group-item">
@@ -138,7 +142,7 @@ class add_activity extends Component {
                                             <div className="control_add_activity_title">{e.title}</div>
                                             <div className="control_add_activity_start_date">{e.start_date}</div>
                                             <div className="control_add_activity_start_date">{e.construct_date}</div>
-                                            <button type="button" class="btn btn-danger" onClick={deleteThis} >刪除活動</button>
+                                            <button type="button" className="btn btn-danger" onClick={deleteThis} >刪除活動</button>
                                         </li>
                                     ))}
                                 </ul>

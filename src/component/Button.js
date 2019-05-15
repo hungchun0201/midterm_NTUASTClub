@@ -1,7 +1,8 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import purple from '@material-ui/core/colors/purple';
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import { deepPurple } from "@material-ui/core/colors";
 const styles = theme => ({
     button: {
         margin: theme.spacing.unit
@@ -34,8 +35,10 @@ function OutlinedButtonsLink(props) {
 
         <Button
             variant="outlined"
-            href="#outlined-buttons"
-            className={classes.button + " " + props.className} onClick={props.onClick}
+            href={props.onClick}
+            target="_blank"
+            className={classes.button + " " + props.className}
+            color="inherit"
         >
             {props.text}
         </Button >

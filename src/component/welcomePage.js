@@ -21,11 +21,11 @@ class welcomePage extends Component {
         }
 
     }
-    reFresh = async function name(params) {
+    reFresh = function name(params) {
         let i = 0;
         this.Frames = frames;
         while (i < time.length) {
-            await setTimeout(() => {
+            setTimeout(() => {
                 console.log(this.state.inductor)
                 this.setState(state => ({
                     inductor: state.inductor += 1

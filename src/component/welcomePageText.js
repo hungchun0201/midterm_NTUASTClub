@@ -37,7 +37,25 @@ let frames = [];
 //console.log(time);
 //export default getText();
 
-const text = `<span class="hl">你.</span>
+const text = `</div>
+
+
+
+
+
+^L0.2
+
+
+
+
+
+
+
+
+
+
+
+                      <span class="hl">你.</span>
 ^L0.2
 
 
@@ -128,7 +146,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                      <span class="hl">你，愛</span>仰<span class="f0 hl">望</span>
 ^L0.2
 
 
@@ -141,7 +159,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                      <span class="f0 hl">你，</span><span class="hl">愛仰望</span>星<span class="f0 hl">空</span>
 ^L0.2
 
 
@@ -296,7 +314,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                                              .
                                              .
                      .&#39;                       &#34; .
                       .                    .  .
@@ -380,8 +398,8 @@ const text = `<span class="hl">你.</span>
 
                          <span class="f0 hl">可曾在夜闌人靜的黑夜時分</span>
 
-
-
+                         <span class="hl">暫忘身後的藍色行星</span>
+^L0.4
 
 
 
@@ -448,7 +466,7 @@ const text = `<span class="hl">你.</span>
                        █ █████∣█████ █
                        █ █████∣█████ █
                        █ █████∣█████ █
-                       █ █████∣█<span class="b7">      </span>█ █
+                       █ █████∣█<span class="b7">Mg0722</span>█ █
                        █ █████∣█████ █
                        █ █████∣█████ █
                        █ █████∣█████ █
@@ -466,7 +484,7 @@ const text = `<span class="hl">你.</span>
                        █ █████  █████ █
                        █ █████  █████ █
                        █ █████  █████ █
-                       █ █████  █<span class="b7">      </span>█ █
+                       █ █████  █<span class="b7">Mg0722</span>█ █
                        █ █████  █████ █
                        █ █████  █████ █
                        █ █████  █████ █
@@ -477,14 +495,14 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                       █<span class="f0 b7">▅▅▅▅▅▅▅▅▅▅▅▅</span>█
                        █ █                  █ █
                        █ ██              ██ █
                        █ ███          ███ █
                        █ ████      ████ █
                        █ ████      ████ █
                        █ ████      ████ █
-                       █ <span class="b7">      </span>█      ████ █
+                       █ <span class="b7">Mg0722</span>█      ████ █
                        █ ████      ████ █
                        █ ████      ████ █
                        █ ████      ████ █
@@ -571,7 +589,7 @@ const text = `<span class="hl">你.</span>
                  █████                    █████
                  █████                    █████
                  █████<span class="f0 hl">且由平日繁瑣的</span>      █████
-                 █<span class="b7">      </span>█                    █████
+                 █<span class="b7">Mg0722</span>█                    █████
                  █████      <span class="f0 hl">小小世界昇華</span>  █████
                  █████                    █████
                  █████                    █████
@@ -589,7 +607,7 @@ const text = `<span class="hl">你.</span>
                ██████                    ██████
                ██████                    ██████
                ██████<span class="hl">廣闊的星空已張開雙手</span>██████
-               █<span class="b7">      </span>██                    ██████
+               █<span class="b7">Mg0722</span>██                    ██████
                ██████                    ██████
                ██████<span class="hl">且由平日繁瑣的</span>      ██████
                ██████                    ██████
@@ -608,7 +626,7 @@ const text = `<span class="hl">你.</span>
                ██████                    ██████
                ██████                    ██████
                ██████<span class="hl">廣闊的星空已張開雙手</span>██████
-               █<span class="b7">      </span>██                    ██████
+               █<span class="b7">Mg0722</span>██                    ██████
                ██████                    ██████
                ██████<span class="hl">且由平日繁瑣的</span>      ██████
                ██████                    ██████
@@ -621,7 +639,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                       █<span class="f0 b7">▅▅▅▅▅▅▅▅▅▅▅▅</span>█
                ▁▃▅▇██                    ██▇▄▃▁
                ██████                    ██████
                ██████                    ██████
@@ -629,7 +647,7 @@ const text = `<span class="hl">你.</span>
                ██████<span class="f0 hl">廣闊的星空已張開雙手</span>██████
                ██████                    ██████
                ██████                    ██████
-               █<span class="b7">      </span>██<span class="f0 hl">且由平日繁瑣的</span>      ██████
+               █<span class="b7">Mg0722</span>██<span class="f0 hl">且由平日繁瑣的</span>      ██████
                ██████                    ██████
                ██████      <span class="f0 hl">小小世界昇華</span>  ██████
                ██████                    ██████
@@ -644,8 +662,8 @@ const text = `<span class="hl">你.</span>
 
 
 
-
-
+                         <span class="f0 hl">                          ◢◣</span>
+                                                 ◢██◣
                                                ◢████◣
                                                            ◢◣
                                                          ◢██◣
@@ -733,7 +751,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+<span class="hl">讓我們一同沐浴在山林中細聽那銀河協奏曲</span>
 
 
                                                    <span class="f2">◢◣</span>
@@ -805,7 +823,7 @@ const text = `<span class="hl">你.</span>
 <span class="hl">讓我們一同沐浴在山林中細聽那銀河協奏曲；</span>
 
 
-
+                                                   <span class="f2">◢◣</span>
 <span class="hl">體驗沁涼的觀星之夜—</span>                             <span class="f2">◢██◣</span>
                                                <span class="f2">◢████◣</span>
                   <span class="f0 hl">品嘗星光與山嵐共同沏上的佳茗</span>             <span class="f2">◢◣</span>
@@ -848,7 +866,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+<span class="hl">讓我們一同沐浴在山林中細聽那銀河協奏曲；</span>
 
 
                                                    <span class="f2">◢◣</span>
@@ -920,7 +938,7 @@ const text = `<span class="hl">你.</span>
 讓我們一同沐浴在山林中細聽那銀河協奏曲；
 
 
-
+                                                   ◢◣
 體驗沁涼的觀星之夜—                             ◢██◣
                                                ◢████◣
                   品嘗星光與山嵐共同沏上的佳茗             ◢◣
@@ -980,8 +998,8 @@ const text = `<span class="hl">你.</span>
 
 
 
-
-
+                                   噓...
+^L0.2
 
 
 
@@ -1053,7 +1071,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                                 別點燈
 
 
                                 且停且坐
@@ -1117,7 +1135,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-
+                           星子們才正要開始歌唱呢
 ^L1
 
 
@@ -1146,7 +1164,7 @@ const text = `<span class="hl">你.</span>
 
 
 
-               .
+.               .
                                         .
                                                                 .
        .
@@ -1164,7 +1182,7 @@ const text = `<span class="hl">你.</span>
                                                         ‧
                     .                ‧
                            <span class="f0 hl">星子們才正要開始歌唱呢</span>                 ‧
-                  .                           .
+.                  .                           .
  ‧
 
 
@@ -1173,14 +1191,14 @@ const text = `<span class="hl">你.</span>
                                                                 ‧
        .
 
-
+                               ‧                         ‧
 ^L0.2
                                           ‧
-             .             .                  .           .          .
+.             .             .                  .           .          .
                                ‧ ‧                               ‧
                       ‧                             ‧
         ‧
-                 .                    .                    .
+.                 .                    .                    .
                                               ‧                        ‧
           .                ‧
                                                         ‧
@@ -1198,11 +1216,11 @@ const text = `<span class="hl">你.</span>
                  .             ‧                         ‧
 ^L0.1
                                           <span class="f3 hl">‧</span>
-             .             .                  .           .          .
+.             .             .                  .           .          .
                                <span class="f3 hl">‧ ‧                               ‧</span>
                       <span class="f3 hl">‧                             ‧</span>
 
-                 .                    .                    .
+.                 .                    .                    .
                                               <span class="f3 hl">‧                        ‧</span>
           .                <span class="f3 hl">‧</span>
                                                         <span class="f3 hl">‧</span>
@@ -1269,7 +1287,7 @@ const text = `<span class="hl">你.</span>
                                                                  <span class="f3 hl"> ‧</span>
 <span class="f3 hl">‧          ‧     ‧     </span>     ‧   .          .       .     <span class="f3 hl">‧  </span>           .
 
-
+            <span class="f3 hl">‧</span>                 .
      .             ‧.           .
 <span class="f3 hl">‧               ‧     </span>             .       .
             <span class="f3 hl">‧           .        .     ‧     </span>      .
@@ -1278,7 +1296,8 @@ const text = `<span class="hl">你.</span>
 .
                         .
 .
-                 ‧       .    <span class="f3 hl">‧               .         ‧</span>`;
+                 ‧       .    <span class="f3 hl">‧               .         ‧</span>
+`;
 
 
 time = text.match(/(\^L[01]\.?[1-9]?){1}/gm).map(e => e.slice(2));
