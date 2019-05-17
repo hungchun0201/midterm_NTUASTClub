@@ -15,7 +15,7 @@
 7. 檔案架構
 ## 歡迎頁面動畫
 
-<img src="./src/img/test2.gif" height="140%" width="100%" >
+<img src="./src/img/welcomePageAnime.gif" height="140%" width="100%" >
 
 此動畫來源於舊天文社PTT BBS社版。原先在PTT上可用動畫播放，但是用網頁板或手機板已無法觀看。本人利用字串分析(RegExp)以及setTimeOut function對原程式碼進行改寫，讓此動畫重現。
 
