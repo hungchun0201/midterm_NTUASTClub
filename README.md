@@ -66,8 +66,7 @@ https://www.ptt.cc/bbs/NTUastclub/M.1409239331.A.3D9.html)
 2. 輸入數字大於現有活動數量+1
 3. 輸入小於1
 
-新增活動時，若序號重複，則後端會將該序號後的活動序號全部+1
-並在回傳活動資料時，以活動順序排序，使前端顯示可以依照此序號新增
+新增活動時，若序號重複，則後端會將該序號後的活動序號全部+1。並在回傳活動資料時，以活動順序排序，使前端顯示可以依照此序號新增
 
 
 > 相關檔案
@@ -81,7 +80,7 @@ https://www.ptt.cc/bbs/NTUastclub/M.1409239331.A.3D9.html)
 * socket.io
 
 ## 粒子效果動畫
-先使用css檔案設定好簡單的transition。並且在js中使用addEventListener偵測頁面捲動，捲動時改變粒的子圖片的位置，即可觸發CSS動畫。
+先使用css檔案設定好簡單的transition。並且在js中使用addEventListener偵測頁面捲動，捲動時改變粒子的圖片的位置，即可觸發CSS動畫。
 > 相關檔案
 * ./src/component/particle.js
 * ./src/css/style.css
@@ -91,7 +90,7 @@ https://www.ptt.cc/bbs/NTUastclub/M.1409239331.A.3D9.html)
 * LifeCycle的應用
 
 ## 行事曆
-本部分是利用原本網路上的行事曆模板做修改。原本行事曆的確可以動態生成本月月曆，但是是使用jQuery實作，我將其改成是react的code，配合jsx動態生成html碼。並且可以點擊不同日期，以及顯示上/下一月份也是個人新增的部分。未來希望可以跟活動資料配合。
+本部分是利用原本網路上的行事曆模板做修改。原本行事曆的確可以動態生成本月月曆，但是是使用jQuery實作，我將其改成是react的code，配合jsx動態生成html碼。可以點擊不同日期，以及顯示上/下一月份，也是個人新增的部分。未來希望可以跟活動資料配合。
 
 > 相關檔案
 * ./src/container/calender.js
