@@ -22,6 +22,11 @@ __實作台大天文社基本的社網架構及內容__。
 * 後端資料庫密碼為LIN123456(原本有使用dotenv隱藏)
 
 # 程式碼詳解
+主要顯示網頁時的架構為
+- navbar
+- cilentPage或是addActivity
+  
+  其中clientPage包含「歡迎頁面、關於我們、近期活動、粒子效果動畫、行事曆、footer」
 ## Navbar導覽列實作
 NAVBAR的美編主要是利用CSS檔進行實作，在參考網路上的模板之後進行修改。並配合React-Router的連結進行顯示。並且使用react-router-hash-link，使的網頁跳轉時能有動畫效果。
 > 相關檔案
@@ -70,8 +75,8 @@ https://www.ptt.cc/bbs/NTUastclub/M.1409239331.A.3D9.html)
 * ./backend/server.js
 * ./backend/activityModul.js
 > 使用技術
-* mongoDB(儲存、修改、刪除資料...等等)
-* async await
+* mongoDB/mongoose(儲存、修改、刪除資料...等等)
+* async await promise
 * express.js
 * socket.io
 
