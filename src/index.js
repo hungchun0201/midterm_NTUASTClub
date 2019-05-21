@@ -8,11 +8,13 @@ import { HashLink as HLink } from 'react-router-hash-link';
 
 import ClientPage from './component/clientPage';
 import AddActivity from './container/add_activity';
+// import Login from './container/login';
 
 import './css/basic.css';
 import './css/navbar.css';
 import './css/style.css';
 import './css/calender.css';
+// import './css/login.css';
 
 
 import * as serviceWorker from './serviceWorker';
@@ -73,12 +75,19 @@ class Index extends React.Component {
                                     Calendar
                             </HLink>
                             </li>
+                            <li id="navbar-6" className="nav-link-item" title="Login">
+                                <Link to="/Login" >
+                                    Login
+                            </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <Switch>
                     <Route exact path="/" render={props => <ClientPage activity_data={this.state.activity_data} {...props} />} />
                     <Route path="/add_activity" render={props => <AddActivity activity_data={this.state.activity_data} {...props} />} />
+                    {/* <Route path='/Login' component={Login} /> */}
+
                 </Switch>
 
             </Router>

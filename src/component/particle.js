@@ -12,10 +12,7 @@ class particle extends Component {
         window.addEventListener('scroll', this.move);
     }
     componentWillUnmount() {
-        this.setState({
-            styleBg1: { 'transform': 'translateY(0px)' },
-            styleBg2: { 'transform': 'translateY(0px)' }
-        })
+        window.removeEventListener('scroll', this.move);
     }
     move = () => {
         let sc = document.documentElement.scrollTop;

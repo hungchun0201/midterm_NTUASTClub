@@ -328,6 +328,7 @@ footer a :hover {
 h4,
 p {
     padding: 5px 0;
+    white-space: pre-line;
 }
 
 #Activity i {
@@ -393,6 +394,10 @@ p {
 
 .list-group li div {
     display: inline-block;
+}
+
+.list-group-item[whendrag="true"]:active {
+    background-color: white;
 }
 
 

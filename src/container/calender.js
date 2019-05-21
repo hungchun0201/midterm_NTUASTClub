@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { OutlinedInherit as InhButton } from '../component/Button';
+import { Image, Transition } from 'semantic-ui-react'
 class Calender extends Component {
     constructor(props) {
         super(props);
@@ -108,17 +109,11 @@ class Calender extends Component {
                                             ))
                                         }</tr>
                                     ))
-
                                     }
                                 </thead>
                                 <tbody id="js-calendar-body"></tbody>
                             </table>
                         </div>
-                        {/* <svg style={{ "visibility": "hidden" }} width="0" height="0">
-                            <filter id="duotone" color-interpolation-filters="sRGB">
-                                <feColorMatrix type="matrix" values="0.7 0 0 0 0.3 0.6 0 0 0 0.2 0.3 0 0 0 0.6 0 0 0 1 0"></feColorMatrix>
-                            </filter>
-                        </svg> */}
                         <InhButton className="last-month" onClick={this.handleLastMonth} text="last month" />
                         <InhButton className="next-month" onClick={this.handleNextMonth} text="next month" />
                     </div >

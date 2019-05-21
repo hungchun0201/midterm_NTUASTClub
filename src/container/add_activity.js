@@ -58,7 +58,7 @@ class add_activity extends Component {
                 <div className="header">
                     <h1>
                         新增活動
-            </h1>
+                    </h1>
                     <div className="container">
                         <div className="row">
                             <div id="activity_title">
@@ -137,7 +137,7 @@ class add_activity extends Component {
                                         <div className="control_add_activity_start_date">建立時間</div>
                                     </li>
                                     {this.props.activity_data.map((e, e_index) => (
-                                        <li key={e.id} className="list-group-item">
+                                        <li key={e.id} className="list-group-item" draggable>
                                             <div className="control_add_activity_order">{e.order}</div>
                                             <div className="control_add_activity_title">{e.title}</div>
                                             <div className="control_add_activity_start_date">{e.start_date}</div>

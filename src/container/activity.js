@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemsCarousel from 'react-items-carousel';
-import { OutlinedLink as LinkButton } from './Button'
+import { OutlinedLink as LinkButton } from '../component/Button'
 
 class activity extends Component {
 
@@ -14,7 +14,6 @@ class activity extends Component {
 
     changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
     render() {
-        console.log(87);
         const {
             activeItemIndex,
         } = this.state;
@@ -58,7 +57,7 @@ class activity extends Component {
                                             height: "350px",
                                             background: 'url(' + item.image_web + ')  no-repeat',
                                             backgroundSize: "contain",
-                                            backgroundPosition: "center",
+                                            backgroundPosition: "left",
 
                                         }} />
 

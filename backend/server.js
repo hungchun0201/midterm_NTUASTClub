@@ -20,24 +20,16 @@ db.on('error', error => {
     console.log(error)
 })
 
-//getText from BBS
-//Aborted ! want to use cheerio to get data before
-
-
-//const request = require('request');
-//const cheerio = require('cheerio');
-//const async = require('async');
-//let allText = ""
-//const url = 'https://www.ptt.cc/bbs/NTU/M.1442499298.A.234.html';
-// request(url, (err, res, body) => {
-//     // console.log(body);
-//     const $ = cheerio.load(body)
-//     $('#main-container #main-content').each(function (i, elem) {
-//         let content = $(this);
-//         console.log($.html(content))
-//         allText = $.html(content).toString();
-//     })
-// });
+const updateFront = () => {
+    Activity.find()
+        .limit(100)
+        .sort({ order: 1 })
+        .exec((err, res) => {
+            if (err) throw err
+            serverSocket.emit('update', res)
+            console.log(res);
+        })
+}
 
 
 db.once('open', () => {
@@ -45,17 +37,7 @@ db.once('open', () => {
 
     serverSocket.on("connection", socket => {
         console.log("a user connected");
-
-        Activity.find()
-            .limit(100)
-            .sort({ order: 1 })
-            .exec((err, res) => {
-                if (err) throw err
-
-                socket.emit('update', res)
-                console.log("server_ok");
-            })
-
+        updateFront();
         socket.on('input', async (data) => {
             let title = data.title;
             let order = parseInt(data.order, 10);
@@ -100,29 +82,13 @@ db.once('open', () => {
                 else {
                     //存放後，更新前端
                     console.log("Saved!");
-                    Activity.find()
-                        .limit(100)
-                        .sort({ order: 1 })
-                        .exec((err, res) => {
-                            if (err) throw err
-                            serverSocket.emit('update', res)
-                            console.log("server_ok");
-                        })
+                    updateFront();
                 }
-
             })
         })
         socket.on("deleteAll", () => {
             Activity.deleteMany({}, () => {
-                console.log("deleted!!!!")
-                Activity.find()
-                    .sort({ order: 1 })
-                    .exec((err, res) => {
-                        if (err) throw err
-
-                        serverSocket.emit('update', res)
-                        console.log("server_update");
-                    })
+                updateFront();
             });
         });
         socket.on("deleteThis", (deleteOrder) => {
@@ -133,14 +99,7 @@ db.once('open', () => {
                 } else {
                     console.log('Activity remove success.');
                     Activity.updateMany({ order: { $gt: deleteOrder } }, { $inc: { order: -1 } }).then((res) => {
-                        Activity.find()
-                            .limit(100)
-                            .sort({ order: 1 })
-                            .exec((err, res) => {
-                                if (err) throw err
-                                serverSocket.emit('update', res)
-                                console.log(res);
-                            })
+                        updateFront();
                     })
 
                 }
